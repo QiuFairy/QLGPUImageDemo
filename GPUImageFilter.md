@@ -1,4 +1,4 @@
-##GPUImage
+## GPUImageFilter
 
 ```
 #pragma mark - 调整颜色 Handle Color
