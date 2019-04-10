@@ -41,7 +41,8 @@
                      @"相册内视频添加滤镜处理",
                      @"相机拍照添加实时滤镜",
                      @"给已有的图片/照片添加滤镜",
-                     @"混合滤镜"].copy;
+                     @"混合滤镜",
+                     @"本地视频添加水印"].copy;
     }
     return _dataArr;
 }
@@ -83,6 +84,10 @@
         case 4:
             //混合滤镜
             vcStr = @"FixFilterViewController";
+            break;
+        case 5:
+            //混合滤镜
+            vcStr = @"VideoWithWatermarkViewController";
             break;
         default:
             break;

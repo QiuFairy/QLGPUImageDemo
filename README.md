@@ -35,7 +35,8 @@ end
 - [x] 相册内视频添加滤镜处理,
 - [x] 相机拍照添加实时滤镜,
 - [x] 给已有的图片/照片添加滤镜,
-- [x] 混合滤镜 (GPUImageFilterGroup/GPUImageFilterPipeline)
+- [x] 混合滤镜 (GPUImageFilterGroup/GPUImageFilterPipeline),
+- [x] 给视频加水印,
 
 
 

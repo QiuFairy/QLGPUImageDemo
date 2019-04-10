@@ -1,16 +1,46 @@
 //
-//  PhotoAlbumVideoFilterViewController.m
+//  VideoWithWatermarkViewController.m
 //  QLGPUImageDemo
 //
-//  Created by qiu on 2019/4/9.
+//  Created by qiu on 2019/4/10.
 //  Copyright © 2019 qiu. All rights reserved.
 //
 
-#import "PhotoAlbumVideoFilterViewController.h"
+/*!
+ 给视频添加文字水印、动态图像水印
+ */
+
+/*!
+ 1、UIView上面有UILabel（文字水印）和UIImageView（图片水印），再通过GPUImageUIElement把UIView对象转换成纹理对象，进入响应链；
+ 2、视频文件的图像数据通过GPUImageMovie进入响应链；
+ 3、GPUImageDissolveBlendFilter合并水印图像和视频，把数据传给响应链的终点GPUImageView以显示到UI和GPUImageMovieWriter以写入临时文件；
+ 4、视频文件的音频数据通过GPUImageMovie传给GPUImageMovieWriter以写入临时文件；
+ 5、最后临时文件通过QLPhotoHelper写入系统库。
+ */
+
+/*!
+ 具体细节
+ 一、GPUImageUIElement
+    GPUImageUIElement继承GPUImageOutput类，作为响应链的源头。通过CoreGraphics把UIView渲染到图像，并通过glTexImage2D绑定到outputFramebuffer指定的纹理，最后通知targets纹理就绪。
+ 二、GPUImageOutput和GPUImageFilter
+    本次demo主要用到了frameProcessingCompletionBlock属性，当GPUImageFilter渲染完纹理后，会调用frameProcessingCompletionBlock回调。
+ 三、响应链解析
+     1、当GPUImageMovie的纹理就绪时，会通知GPUImageFilter处理图像；
+     2、GPUImageFilter会调用frameProcessingCompletionBlock回调；
+     3、GPUImageUIElement在回调中渲染图像，纹理就绪后通知
+     GPUImageDissolveBlendFilter；
+     4、frameProcessingCompletionBlock回调结束后，通知
+     GPUImageDissolveBlendFilter纹理就绪；
+     5、GPUImageDissolveBlendFilter收到两个纹理后开始渲染，纹理就绪后通知GPUImageMovieWriter
+ */
+
+#import "VideoWithWatermarkViewController.h"
+
 #import <GPUImage.h>
 
 #import "QLPhotoHelper.h"
-@interface PhotoAlbumVideoFilterViewController ()
+
+@interface VideoWithWatermarkViewController ()
 
 @property (nonatomic,strong) GPUImageMovie * movieFile;
 @property (nonatomic,strong) GPUImageOutput<GPUImageInput> * filter;
@@ -24,7 +54,7 @@
 
 @end
 
-@implementation PhotoAlbumVideoFilterViewController
+@implementation VideoWithWatermarkViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,79 +66,81 @@
     
     // 要转换的视频
     NSURL *pathUrl = [[NSBundle mainBundle] URLForResource:@"ceshilive" withExtension:@"mp4"];
-    
     AVAsset *asset = [AVAsset assetWithURL:pathUrl];
-    CGSize size = asset.naturalSize;
     
-//    _movieFile = [[GPUImageMovie alloc] initWithURL:pathUrl];
+    //源
     _movieFile = [[GPUImageMovie alloc]initWithAsset:asset];
     _movieFile.runBenchmark = YES;
     _movieFile.playAtActualSpeed = NO;
     
-    // 随意创建了一个滤镜 (好像是有点泛黄色的效果)
-    _filter = [[GPUImageSepiaFilter alloc] init];
-    [_movieFile addTarget:_filter];
+    // 滤镜 合成水印
+    _filter = [[GPUImageDissolveBlendFilter alloc] init];
+    [(GPUImageDissolveBlendFilter *)_filter setMix:0.5];
     
     // 显示
     GPUImageView * filterView = [[GPUImageView alloc] initWithFrame:CGRectMake(50, 250, 300, 400)];
     [self.view addSubview: filterView];
-    [_filter addTarget:filterView];
     
+    // 水印
+    CGSize size = self.view.bounds.size;
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    label.text = @"我是水印";
+    label.font = [UIFont systemFontOfSize:30];
+    label.textColor = [UIColor redColor];
+    [label sizeToFit];
+    UIImage *image = [UIImage imageNamed:@"kawayi.jpg"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+    subView.backgroundColor = [UIColor clearColor];
+    imageView.frame = CGRectMake(0, 0, 100, 100);
+    imageView.center = CGPointMake(subView.bounds.size.width / 2, subView.bounds.size.height / 2);
+    [subView addSubview:imageView];
+    [subView addSubview:label];
+    
+    //
+    GPUImageUIElement *uielement = [[GPUImageUIElement alloc] initWithView:subView];
     
     // 设置输出路径
     NSString * pathToMovie = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Movie.m4v"];
-    // - 如果文件已存在,AVAssetWriter不允许直接写进新的帧,所以会删掉老的视频文件
+    // - 如果文件已存在
     unlink([pathToMovie UTF8String]);
     self.movieURL = [NSURL fileURLWithPath:pathToMovie];
     
-//    // 文字水印
-//    UILabel *label = [[UILabel alloc] init];
-//    label.text = @"QIUFAIRY";
-//    label.font = [UIFont systemFontOfSize:30];
-//    label.textColor = [UIColor whiteColor];
-//    [label setTextAlignment:NSTextAlignmentCenter];
-//    [label sizeToFit];
-//    label.layer.masksToBounds = YES;
-//    label.layer.cornerRadius = 18.0f;
-//    [label setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5]];
-//    [label setFrame:CGRectMake(50, 100, label.frame.size.width+20, label.frame.size.height)];
-//
-//    GPUImageUIElement *uielement = [[GPUImageUIElement alloc] initWithView:label];
-//    GPUImageFilter* progressFilter = [[GPUImageFilter alloc] init];
-//
-//    [progressFilter addTarget:_filter];
-//    [_movieFile addTarget:progressFilter];
-//    [uielement addTarget:_filter];
-    
-    
-    // 输出 后面的size可改 ~ 现在来说480*640有点太差劲了
+    // 输出 后面的size可改
     _movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:self.movieURL size:CGSizeMake(480.0, 640.0)];
     
-    [_filter addTarget:_movieWriter];
+    GPUImageFilter* progressFilter = [[GPUImageFilter alloc] init];
+    [_movieFile addTarget:progressFilter];
+    [progressFilter addTarget:_filter];
+    [uielement addTarget:_filter];
+    
     _movieWriter.shouldPassthroughAudio = YES;
     if ([[asset tracksWithMediaType:AVMediaTypeAudio] count] > 0){
         _movieFile.audioEncodingTarget = _movieWriter;
-    } else {//no audio
+    } else {
+        //no audio
         _movieFile.audioEncodingTarget = nil;
     }
     
+    [_filter addTarget:filterView];
+    [_filter addTarget:_movieWriter];
+    
     [_movieFile enableSynchronizedEncodingUsingMovieWriter:_movieWriter];
     
-
-//    //渲染
-//    [progressFilter setFrameProcessingCompletionBlock:^(GPUImageOutput *output, CMTime time) {
-//        //水印可以移动
-//        CGRect frame = label.frame;
-//        frame.origin.x += 1;
-//        frame.origin.y += 1;
-//        label.frame = frame;
-//        //第5秒之后隐藏coverImageView2
-//        if (time.value/time.timescale>=5.0) {
-//            [label removeFromSuperview];
-//        }
-//        [uielement update];
-//
-//    }];
+    [progressFilter setFrameProcessingCompletionBlock:^(GPUImageOutput *output, CMTime time) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            CGRect frame = imageView.frame;
+            frame.origin.x += 1;
+            frame.origin.y += 1;
+            imageView.frame = frame;
+            //第8秒之后隐藏imageView
+            if (time.value/time.timescale>=8.0) {
+                [imageView removeFromSuperview];
+            }
+        });
+        
+        [uielement updateWithTimestamp:time];
+    }];
     
     //保存相册
     __weak typeof(self) weakself = self;
@@ -122,14 +154,11 @@
             strongSelf.progressLabel.text = @"完成 !";
         });
         
-         [strongSelf writeToPhotoAlbum];
-        
         // 异步写入相册
         dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         dispatch_async(concurrentQueue, ^{
-           
+            [strongSelf writeToPhotoAlbum];
         });
-        
     }];
 }
 
