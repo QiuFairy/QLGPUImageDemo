@@ -163,7 +163,7 @@
     [arrayTemp addObject:filter4];
     
     /**
-     *  @author hj, 07.02 2016 14:07
+     *  @author ql 2019-04-09 11:45
      *
      *  初始化 pipeline
      *
