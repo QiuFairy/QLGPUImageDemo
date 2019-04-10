@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41845F11225C816900C544CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41845F10225C816900C544CB /* AppDelegate.m */; };
+		41845F14225C816900C544CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41845F13225C816900C544CB /* ViewController.m */; };
+		41845F17225C816900C544CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41845F15225C816900C544CB /* Main.storyboard */; };
+		41845F19225C816B00C544CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41845F18225C816B00C544CB /* Assets.xcassets */; };
+		41845F1C225C816B00C544CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41845F1A225C816B00C544CB /* LaunchScreen.storyboard */; };
+		41845F1F225C816B00C544CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41845F1E225C816B00C544CB /* main.m */; };
+		41845F2A225C82C500C544CB /* SimpleVideoFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41845F29225C82C500C544CB /* SimpleVideoFilterViewController.m */; };
+		41845F2D225C844800C544CB /* PhotoAlbumVideoFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41845F2C225C844800C544CB /* PhotoAlbumVideoFilterViewController.m */; };
+		41845F30225C84DD00C544CB /* PhotoFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41845F2F225C84DD00C544CB /* PhotoFilterViewController.m */; };
+		41845F33225C852D00C544CB /* ImageFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41845F32225C852D00C544CB /* ImageFilterViewController.m */; };
+		41845F36225C856900C544CB /* FixFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41845F35225C856900C544CB /* FixFilterViewController.m */; };
+		41845F38225C87A500C544CB /* kawayi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41845F37225C87A500C544CB /* kawayi.jpg */; };
+		41845F3A225C87DA00C544CB /* ceshilive.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 41845F39225C87DA00C544CB /* ceshilive.mp4 */; };
+		41845F3D225C8D9D00C544CB /* FilterBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41845F3C225C8D9D00C544CB /* FilterBaseViewController.m */; };
+		41845F40225C91F300C544CB /* QLPhotoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 41845F3F225C91F300C544CB /* QLPhotoHelper.m */; };
+		65915F3176D9F5DFB9E0DC3C /* libPods-QLGPUImageDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D51957F5FF2FCD68F90981 /* libPods-QLGPUImageDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2685ACCFB068CB780FFBC0F3 /* Pods-QLGPUImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QLGPUImageDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QLGPUImageDemo/Pods-QLGPUImageDemo.release.xcconfig"; sourceTree = "<group>"; };
+		41845F0C225C816900C544CB /* QLGPUImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLGPUImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41845F0F225C816900C544CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		41845F10225C816900C544CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		41845F12225C816900C544CB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		41845F13225C816900C544CB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		41845F16225C816900C544CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		41845F18225C816B00C544CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		41845F1B225C816B00C544CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		41845F1D225C816B00C544CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41845F1E225C816B00C544CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		41845F28225C82C500C544CB /* SimpleVideoFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleVideoFilterViewController.h; sourceTree = "<group>"; };
+		41845F29225C82C500C544CB /* SimpleVideoFilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleVideoFilterViewController.m; sourceTree = "<group>"; };
+		41845F2B225C844800C544CB /* PhotoAlbumVideoFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoAlbumVideoFilterViewController.h; sourceTree = "<group>"; };
+		41845F2C225C844800C544CB /* PhotoAlbumVideoFilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbumVideoFilterViewController.m; sourceTree = "<group>"; };
+		41845F2E225C84DD00C544CB /* PhotoFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoFilterViewController.h; sourceTree = "<group>"; };
+		41845F2F225C84DD00C544CB /* PhotoFilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoFilterViewController.m; sourceTree = "<group>"; };
+		41845F31225C852D00C544CB /* ImageFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageFilterViewController.h; sourceTree = "<group>"; };
+		41845F32225C852D00C544CB /* ImageFilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageFilterViewController.m; sourceTree = "<group>"; };
+		41845F34225C856900C544CB /* FixFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FixFilterViewController.h; sourceTree = "<group>"; };
+		41845F35225C856900C544CB /* FixFilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FixFilterViewController.m; sourceTree = "<group>"; };
+		41845F37225C87A500C544CB /* kawayi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kawayi.jpg; sourceTree = "<group>"; };
+		41845F39225C87DA00C544CB /* ceshilive.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ceshilive.mp4; sourceTree = "<group>"; };
+		41845F3B225C8D9D00C544CB /* FilterBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterBaseViewController.h; sourceTree = "<group>"; };
+		41845F3C225C8D9D00C544CB /* FilterBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterBaseViewController.m; sourceTree = "<group>"; };
+		41845F3E225C91F300C544CB /* QLPhotoHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QLPhotoHelper.h; sourceTree = "<group>"; };
+		41845F3F225C91F300C544CB /* QLPhotoHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLPhotoHelper.m; sourceTree = "<group>"; };
+		56D51957F5FF2FCD68F90981 /* libPods-QLGPUImageDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QLGPUImageDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B37484BA6EA1AA3C92B78B9E /* Pods-QLGPUImageDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QLGPUImageDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QLGPUImageDemo/Pods-QLGPUImageDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41845F09225C816900C544CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65915F3176D9F5DFB9E0DC3C /* libPods-QLGPUImageDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10EE1AF22AD1BB1B14622704 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B37484BA6EA1AA3C92B78B9E /* Pods-QLGPUImageDemo.debug.xcconfig */,
+				2685ACCFB068CB780FFBC0F3 /* Pods-QLGPUImageDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		41845F03225C816900C544CB = {
+			isa = PBXGroup;
+			children = (
+				41845F0E225C816900C544CB /* QLGPUImageDemo */,
+				41845F0D225C816900C544CB /* Products */,
+				10EE1AF22AD1BB1B14622704 /* Pods */,
+				BA6DAA13D75BAB89DBCFD240 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		41845F0D225C816900C544CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41845F0C225C816900C544CB /* QLGPUImageDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41845F0E225C816900C544CB /* QLGPUImageDemo */ = {
+			isa = PBXGroup;
+			children = (
+				41845F39225C87DA00C544CB /* ceshilive.mp4 */,
+				41845F37225C87A500C544CB /* kawayi.jpg */,
+				41845F0F225C816900C544CB /* AppDelegate.h */,
+				41845F10225C816900C544CB /* AppDelegate.m */,
+				41845F12225C816900C544CB /* ViewController.h */,
+				41845F13225C816900C544CB /* ViewController.m */,
+				41845F28225C82C500C544CB /* SimpleVideoFilterViewController.h */,
+				41845F29225C82C500C544CB /* SimpleVideoFilterViewController.m */,
+				41845F2B225C844800C544CB /* PhotoAlbumVideoFilterViewController.h */,
+				41845F2C225C844800C544CB /* PhotoAlbumVideoFilterViewController.m */,
+				41845F2E225C84DD00C544CB /* PhotoFilterViewController.h */,
+				41845F2F225C84DD00C544CB /* PhotoFilterViewController.m */,
+				41845F31225C852D00C544CB /* ImageFilterViewController.h */,
+				41845F32225C852D00C544CB /* ImageFilterViewController.m */,
+				41845F34225C856900C544CB /* FixFilterViewController.h */,
+				41845F35225C856900C544CB /* FixFilterViewController.m */,
+				41845F3B225C8D9D00C544CB /* FilterBaseViewController.h */,
+				41845F3C225C8D9D00C544CB /* FilterBaseViewController.m */,
+				41845F3E225C91F300C544CB /* QLPhotoHelper.h */,
+				41845F3F225C91F300C544CB /* QLPhotoHelper.m */,
+				41845F15225C816900C544CB /* Main.storyboard */,
+				41845F18225C816B00C544CB /* Assets.xcassets */,
+				41845F1A225C816B00C544CB /* LaunchScreen.storyboard */,
+				41845F1D225C816B00C544CB /* Info.plist */,
+				41845F1E225C816B00C544CB /* main.m */,
+			);
+			path = QLGPUImageDemo;
+			sourceTree = "<group>";
+		};
+		BA6DAA13D75BAB89DBCFD240 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56D51957F5FF2FCD68F90981 /* libPods-QLGPUImageDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		41845F0B225C816900C544CB /* QLGPUImageDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41845F22225C816B00C544CB /* Build configuration list for PBXNativeTarget "QLGPUImageDemo" */;
+			buildPhases = (
+				D2E940312FB02C65AB6DBEA2 /* [CP] Check Pods Manifest.lock */,
+				41845F08225C816900C544CB /* Sources */,
+				41845F09225C816900C544CB /* Frameworks */,
+				41845F0A225C816900C544CB /* Resources */,
+				6C756DCE6578DEAD089ADBB4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QLGPUImageDemo;
+			productName = QLGPUImageDemo;
+			productReference = 41845F0C225C816900C544CB /* QLGPUImageDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		41845F04225C816900C544CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = qiu;
+				TargetAttributes = {
+					41845F0B225C816900C544CB = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 41845F07225C816900C544CB /* Build configuration list for PBXProject "QLGPUImageDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 41845F03225C816900C544CB;
+			productRefGroup = 41845F0D225C816900C544CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41845F0B225C816900C544CB /* QLGPUImageDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41845F0A225C816900C544CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41845F1C225C816B00C544CB /* LaunchScreen.storyboard in Resources */,
+				41845F19225C816B00C544CB /* Assets.xcassets in Resources */,
+				41845F17225C816900C544CB /* Main.storyboard in Resources */,
+				41845F3A225C87DA00C544CB /* ceshilive.mp4 in Resources */,
+				41845F38225C87A500C544CB /* kawayi.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6C756DCE6578DEAD089ADBB4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QLGPUImageDemo/Pods-QLGPUImageDemo-resources.sh",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QLGPUImageDemo/Pods-QLGPUImageDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2E940312FB02C65AB6DBEA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QLGPUImageDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41845F08225C816900C544CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41845F36225C856900C544CB /* FixFilterViewController.m in Sources */,
+				41845F14225C816900C544CB /* ViewController.m in Sources */,
+				41845F30225C84DD00C544CB /* PhotoFilterViewController.m in Sources */,
+				41845F1F225C816B00C544CB /* main.m in Sources */,
+				41845F2A225C82C500C544CB /* SimpleVideoFilterViewController.m in Sources */,
+				41845F11225C816900C544CB /* AppDelegate.m in Sources */,
+				41845F3D225C8D9D00C544CB /* FilterBaseViewController.m in Sources */,
+				41845F40225C91F300C544CB /* QLPhotoHelper.m in Sources */,
+				41845F2D225C844800C544CB /* PhotoAlbumVideoFilterViewController.m in Sources */,
+				41845F33225C852D00C544CB /* ImageFilterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		41845F15225C816900C544CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41845F16225C816900C544CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		41845F1A225C816B00C544CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41845F1B225C816B00C544CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		41845F20225C816B00C544CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		41845F21225C816B00C544CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		41845F23225C816B00C544CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B37484BA6EA1AA3C92B78B9E /* Pods-QLGPUImageDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SAUWALLH4J;
+				INFOPLIST_FILE = QLGPUImageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiu.love;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		41845F24225C816B00C544CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2685ACCFB068CB780FFBC0F3 /* Pods-QLGPUImageDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SAUWALLH4J;
+				INFOPLIST_FILE = QLGPUImageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiu.love;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41845F07225C816900C544CB /* Build configuration list for PBXProject "QLGPUImageDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41845F20225C816B00C544CB /* Debug */,
+				41845F21225C816B00C544CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41845F22225C816B00C544CB /* Build configuration list for PBXNativeTarget "QLGPUImageDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41845F23225C816B00C544CB /* Debug */,
+				41845F24225C816B00C544CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 41845F04225C816900C544CB /* Project object */;
+}
