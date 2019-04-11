@@ -34,6 +34,14 @@
      5、GPUImageDissolveBlendFilter收到两个纹理后开始渲染，纹理就绪后通知GPUImageMovieWriter
  */
 
+/*!
+ GPUImageAlphaBlendFilter 与 GPUImageDissolveBlendFilter
+ 
+ 从名称翻译就是透明度混合滤镜效果。我们的实现原理就是把水印视图 _watermarkView 和视频中的每一帧图片作为输入源经过 GPUImageAlphaBlendFilter 处理后生成新的图片作为播放的帧图片。
+ 说明：有很多种混合效果可以用，在网上搜的很多是用的 GPUImageDissolveBlendFilter 处理的，用法跟 GPUImageAlphaBlendFilter一样，经自己测试发现，GPUImageDissolveBlendFilter 处理的水印会影响原视频的亮度，使视频变暗。
+ 
+ */
+
 #import "VideoWithWatermarkViewController.h"
 
 #import <GPUImage.h>

@@ -23,6 +23,10 @@
 		41845F3D225C8D9D00C544CB /* FilterBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41845F3C225C8D9D00C544CB /* FilterBaseViewController.m */; };
 		41845F40225C91F300C544CB /* QLPhotoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 41845F3F225C91F300C544CB /* QLPhotoHelper.m */; };
 		41A18549225DD093007E164E /* VideoWithWatermarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A18548225DD093007E164E /* VideoWithWatermarkViewController.m */; };
+		41C9D28C225ECDC200153617 /* PhotoWithWatermarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C9D28B225ECDC200153617 /* PhotoWithWatermarkViewController.m */; };
+		41C9D290225ED08400153617 /* GPUImageMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C9D28F225ED08400153617 /* GPUImageMovieViewController.m */; };
+		41C9D294225ED20E00153617 /* CameraVideoWithWatermarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C9D293225ED20E00153617 /* CameraVideoWithWatermarkViewController.m */; };
+		41C9D29A225ED3E600153617 /* LocalVideo2WithWatermarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C9D299225ED3E600153617 /* LocalVideo2WithWatermarkViewController.m */; };
 		65915F3176D9F5DFB9E0DC3C /* libPods-QLGPUImageDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D51957F5FF2FCD68F90981 /* libPods-QLGPUImageDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +60,14 @@
 		41845F3F225C91F300C544CB /* QLPhotoHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QLPhotoHelper.m; sourceTree = "<group>"; };
 		41A18547225DD093007E164E /* VideoWithWatermarkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoWithWatermarkViewController.h; sourceTree = "<group>"; };
 		41A18548225DD093007E164E /* VideoWithWatermarkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoWithWatermarkViewController.m; sourceTree = "<group>"; };
+		41C9D28A225ECDC200153617 /* PhotoWithWatermarkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoWithWatermarkViewController.h; sourceTree = "<group>"; };
+		41C9D28B225ECDC200153617 /* PhotoWithWatermarkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoWithWatermarkViewController.m; sourceTree = "<group>"; };
+		41C9D28E225ED08400153617 /* GPUImageMovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageMovieViewController.h; sourceTree = "<group>"; };
+		41C9D28F225ED08400153617 /* GPUImageMovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageMovieViewController.m; sourceTree = "<group>"; };
+		41C9D292225ED20E00153617 /* CameraVideoWithWatermarkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraVideoWithWatermarkViewController.h; sourceTree = "<group>"; };
+		41C9D293225ED20E00153617 /* CameraVideoWithWatermarkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraVideoWithWatermarkViewController.m; sourceTree = "<group>"; };
+		41C9D298225ED3E600153617 /* LocalVideo2WithWatermarkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalVideo2WithWatermarkViewController.h; sourceTree = "<group>"; };
+		41C9D299225ED3E600153617 /* LocalVideo2WithWatermarkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalVideo2WithWatermarkViewController.m; sourceTree = "<group>"; };
 		56D51957F5FF2FCD68F90981 /* libPods-QLGPUImageDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QLGPUImageDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37484BA6EA1AA3C92B78B9E /* Pods-QLGPUImageDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QLGPUImageDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QLGPUImageDemo/Pods-QLGPUImageDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,12 +120,15 @@
 				41845F10225C816900C544CB /* AppDelegate.m */,
 				41845F12225C816900C544CB /* ViewController.h */,
 				41845F13225C816900C544CB /* ViewController.m */,
+				41C9D28D225ED07000153617 /* GPUImageMovie基本用法 */,
 				41A1853F225DCFB9007E164E /* 相机录像添加实时滤镜 */,
 				41A18540225DCFBD007E164E /* 相册内视频添加滤镜处理 */,
 				41A18541225DCFC1007E164E /* 相机拍照添加实时滤镜 */,
 				41A18542225DCFC6007E164E /* 给已有的图片or照片添加滤镜 */,
 				41A18543225DCFCA007E164E /* 混合滤镜 */,
-				41A18546225DD01A007E164E /* 给视频加水印 */,
+				41C9D291225ED1CE00153617 /* 实时视频加水印 */,
+				41A18546225DD01A007E164E /* 本地视频加水印 */,
+				41C9D289225ECD8E00153617 /* 本地图片加水印 */,
 				41A18544225DCFCE007E164E /* 基础VC */,
 				41A18545225DCFD3007E164E /* 图片视频保存类 */,
 				41845F15225C816900C544CB /* Main.storyboard */,
@@ -188,13 +203,42 @@
 			path = "图片视频保存类";
 			sourceTree = "<group>";
 		};
-		41A18546225DD01A007E164E /* 给视频加水印 */ = {
+		41A18546225DD01A007E164E /* 本地视频加水印 */ = {
 			isa = PBXGroup;
 			children = (
 				41A18547225DD093007E164E /* VideoWithWatermarkViewController.h */,
 				41A18548225DD093007E164E /* VideoWithWatermarkViewController.m */,
+				41C9D298225ED3E600153617 /* LocalVideo2WithWatermarkViewController.h */,
+				41C9D299225ED3E600153617 /* LocalVideo2WithWatermarkViewController.m */,
 			);
-			path = "给视频加水印";
+			path = "本地视频加水印";
+			sourceTree = "<group>";
+		};
+		41C9D289225ECD8E00153617 /* 本地图片加水印 */ = {
+			isa = PBXGroup;
+			children = (
+				41C9D28A225ECDC200153617 /* PhotoWithWatermarkViewController.h */,
+				41C9D28B225ECDC200153617 /* PhotoWithWatermarkViewController.m */,
+			);
+			path = "本地图片加水印";
+			sourceTree = "<group>";
+		};
+		41C9D28D225ED07000153617 /* GPUImageMovie基本用法 */ = {
+			isa = PBXGroup;
+			children = (
+				41C9D28E225ED08400153617 /* GPUImageMovieViewController.h */,
+				41C9D28F225ED08400153617 /* GPUImageMovieViewController.m */,
+			);
+			path = "GPUImageMovie基本用法";
+			sourceTree = "<group>";
+		};
+		41C9D291225ED1CE00153617 /* 实时视频加水印 */ = {
+			isa = PBXGroup;
+			children = (
+				41C9D292225ED20E00153617 /* CameraVideoWithWatermarkViewController.h */,
+				41C9D293225ED20E00153617 /* CameraVideoWithWatermarkViewController.m */,
+			);
+			path = "实时视频加水印";
 			sourceTree = "<group>";
 		};
 		BA6DAA13D75BAB89DBCFD240 /* Frameworks */ = {
@@ -326,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41C9D294225ED20E00153617 /* CameraVideoWithWatermarkViewController.m in Sources */,
 				41845F36225C856900C544CB /* FixFilterViewController.m in Sources */,
 				41845F14225C816900C544CB /* ViewController.m in Sources */,
 				41845F30225C84DD00C544CB /* PhotoFilterViewController.m in Sources */,
@@ -334,8 +379,11 @@
 				41845F11225C816900C544CB /* AppDelegate.m in Sources */,
 				41A18549225DD093007E164E /* VideoWithWatermarkViewController.m in Sources */,
 				41845F3D225C8D9D00C544CB /* FilterBaseViewController.m in Sources */,
+				41C9D28C225ECDC200153617 /* PhotoWithWatermarkViewController.m in Sources */,
 				41845F40225C91F300C544CB /* QLPhotoHelper.m in Sources */,
 				41845F2D225C844800C544CB /* PhotoAlbumVideoFilterViewController.m in Sources */,
+				41C9D290225ED08400153617 /* GPUImageMovieViewController.m in Sources */,
+				41C9D29A225ED3E600153617 /* LocalVideo2WithWatermarkViewController.m in Sources */,
 				41845F33225C852D00C544CB /* ImageFilterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

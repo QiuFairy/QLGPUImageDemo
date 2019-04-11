@@ -123,13 +123,6 @@
     //    });
 }
 
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-    if (!error) {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"保存处理后的图片到相册" message:@"保存成功" preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-        [self presentViewController:alertController animated:YES completion:nil];
-    }
-}
 
 #pragma mark - 两种组合渲染之二 GPUImageFilterPipeline
 - (void)filterPipeLine{
@@ -192,5 +185,13 @@
     //    });
 }
 
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    if (!error) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"保存处理后的图片到相册" message:@"保存成功" preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+}
 
 @end

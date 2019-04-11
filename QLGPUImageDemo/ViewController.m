@@ -37,12 +37,16 @@
 
 -(NSArray *)dataArr {
     if (!_dataArr) {
-        _dataArr = @[@"相机录像添加实时滤镜",
+        _dataArr = @[@"GPUImageMovie基本用法",
+                     @"相机录像添加实时滤镜",
                      @"相册内视频添加滤镜处理",
                      @"相机拍照添加实时滤镜",
                      @"给已有的图片/照片添加滤镜",
                      @"混合滤镜",
-                     @"本地视频添加水印"].copy;
+                     @"实时视频添加水印",
+                     @"本地视频添加水印",
+                     @"本地视频添加水印2",
+                     @"给本地图片添加水印"].copy;
     }
     return _dataArr;
 }
@@ -66,28 +70,44 @@
     NSString * vcStr = @"";
     switch (indexPath.row) {
         case 0:
+            //GPUImageMovie基本用法
+            vcStr = @"GPUImageMovieViewController";
+            break;
+        case 1:
             //相机录像添加实时滤镜
             vcStr = @"SimpleVideoFilterViewController";
             break;
-        case 1:
+        case 2:
             //相册内视频添加滤镜处理
             vcStr = @"PhotoAlbumVideoFilterViewController";
             break;
-        case 2:
+        case 3:
             //相机拍照添加实时滤镜
             vcStr = @"PhotoFilterViewController";
             break;
-        case 3:
+        case 4:
             //给已有的图片/照片添加滤镜
             vcStr = @"ImageFilterViewController";
             break;
-        case 4:
+        case 5:
             //混合滤镜
             vcStr = @"FixFilterViewController";
             break;
-        case 5:
-            //混合滤镜
+        case 6:
+            //实时视频添加水印
+            vcStr = @"CameraVideoWithWatermarkViewController";
+            break;
+        case 7:
+            //本地视频添加水印
             vcStr = @"VideoWithWatermarkViewController";
+            break;
+        case 8:
+            //本地视频添加水印2
+            vcStr = @"LocalVideo2WithWatermarkViewController";
+            break;
+        case 9:
+            //本地图片添加水印
+            vcStr = @"PhotoWithWatermarkViewController";
             break;
         default:
             break;

@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"开始" style:UIBarButtonItemStylePlain target:self action:@selector(clickedControlButton:end:)];
     self.navigationItem.rightBarButtonItem = rightItem;
     self.rightItem = rightItem;
